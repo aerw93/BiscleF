@@ -29,14 +29,6 @@ const body1 = document.querySelector('body');
     })
    });
 })();
-//(function () {
-//   var close = document.getElementsByClassName('header__dropdown');
-//   close.getElementsByClassName('nav__link').forEach(function(e) {
-//      e.addEventListener('click', function() {
-//        e.parentNode.classList.remove('is-open');
-//      })
-//    })
-//});
 
 // Кнопки с выпадаюшим окном
 (function () {
@@ -160,60 +152,4 @@ window.addEventListener('scroll', function() {
      'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
    );
  })(window.document, window.history, window.location);
-
-
-// Секция скрола активная ссылка
-//const section = document.querySelectorAll('div[id]')
-//window.addEventListener('scroll', scrollActive)
-//function scrollActive(){
-//   const scroll = window.pageYOffset
-
-//   section.forEach(current => {
-//      const sectionHeight = current.offsetHeight
-//      const sectionTop = current.offsetTop 
-//      sectionId = current.getAttribute('id')
-
-//      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-//         document.querySelector('.header__dropdown a[href*=' + sectionId + ']').classList.add('active') 
-//      } else {
-//         document.querySelector('.header__dropdown a[href*=' + sectionId + ']').classList.remove('active')
-//      }
-//   })
-//}
-
-
-
-
-
-
-
-                        // Отладка и тесты
-// (function () {
-//   var click = document.getElementById('img-click');
-//   click.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     var menu = document.getElementById('img-span');
-//     menu.classList.toggle('active');
-//   });
-// })();
-// const buttons = document.querySelectorAll('button');
-// buttons.forEach(btn => {
-//   btn.addEventListener('click', function(e) {
-
-//     let x = e.clientX - e.target.offsetLeft;
-//     let y = e.clientY - e.target.offsetTop;
-
-//     let ripples = document.createElement('span')
-//     ripples.style.left = x + 'px';
-//     ripples.style.top = y + 'px';
-//     this.appendChild(ripples);
-
-//     setTimeout(() =>{
-//       ripples.remove()
-//     },1000);
-//   })
-// })
-
-// console.log(document.getElementById('img-click'));
-// console.log(document.querySelectorAll('.main-btn  '))
 
