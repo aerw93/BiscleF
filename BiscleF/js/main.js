@@ -60,9 +60,9 @@ const body1 = document.querySelector('body');
 
 // Смена Картинки при выборе цвета Шлема
 var pics = {
-   "1": "/img/sixth-img.png",
-   "2": "/img/helm_yellow.png",
-   "3": "/img/Fend_white.png"    
+   "1": "./img/helmet-black.png",
+   "2": "./img/helm_yellow.png",
+   "3": "./img/Fend_white.png"    
  }
 function check_value(event){
   document.getElementById("imagetest").src = pics[event.target.value] ;
