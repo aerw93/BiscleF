@@ -111,6 +111,7 @@ body {
   max-width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .parallax {
@@ -147,7 +148,7 @@ body {
 .par__mount-last {
   position: absolute;
   width: 100%;
-  top: 840px;
+  top: 755px;
   height: 700px;
   left: 0;
   z-index: 15;
@@ -343,9 +344,6 @@ body {
   top: 250px;
   z-index: 150;
   padding: 10px 30px;
-}
-.page__slider ul {
-  border-right: 2px solid rgba(128, 128, 128, 0.342);
 }
 .page__slider ul li {
   text-align: center;
@@ -696,6 +694,15 @@ main {
   object-fit: cover;
 }
 
+.page {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  visibility: hidden;
+}
+
 @media (max-width: 1440px) {
   main {
     margin-top: -200px;
@@ -721,14 +728,6 @@ main {
     min-height: 600px;
   }
 }
-.page {
-  position: absolute;
-  top: -200px;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
 @media (min-width: 1441px) {
   .page {
     top: -180px;
@@ -935,6 +934,25 @@ footer {
   padding-top: 15px;
 }
 
+@media (min-width: 1920px) {
+  .main__content {
+    grid-template-rows: repeat(3, 80vh);
+    margin: 0 auto;
+  }
+
+  .par__mount-last {
+    top: 700px;
+    height: 750px;
+  }
+
+  .page__slider {
+    right: 3%;
+  }
+
+  .hero__title {
+    font-size: 80px;
+  }
+}
 @media (max-width: 1440px) {
   .footer__more-menu {
     justify-content: flex-end;

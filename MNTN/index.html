@@ -13,17 +13,8 @@
 
 <body>
    <div class="wrapper">
-      <div class="page__slider">
-         <div class="page__nav">
-            <ul>
-               <li><a href="#start">Start</a></li>
-               <li><a href="#screen01">01</a></li>
-               <li><a href="#screen02">02</a></li>
-               <li><a href="#screen03">03</a></li>
-            </ul>
-         </div>
-      </div>
-      <div class="slayer" id="start">
+
+      <div class="slayer section" id="start">
          <div class="parallax">
             <div class="conteiner">
                <header class="header">
@@ -45,7 +36,7 @@
                   </div>
                </header>
             </div>
-            <section class="hero-body translate" data-speed="0.70">
+            <section class="hero-body translate" data-speed="0.50">
                <div class="hero__content">
                   <div class="hero__subtitle">
                      <h3>A Hiking guide</h3>
@@ -66,13 +57,24 @@
             <img src="./img/Sky-back.png" class="par__sky translate" data-speed="-0.65" alt="Opps">
             <img src="./img/second__mountain.png" class="par__mount-back translate" data-speed="-0.40" alt="Opps">
             <img src="./img/main_mountaine.png" class="par__mount-main translate" data-speed="-0.20" alt="Opps">
-            <img src="./img/BG-Content.png" class="par__mount-last translate" data-speed="-0.30" alt="Opps">
+            <img src="./img/BG-Content.png" class="par__mount-last translate" data-speed="-0.20" alt="Opps">
+            <div class="page__slider">
+
+               <ul>
+                  <li><a class="active" href="#start">Start</a></li>
+                  <li><a href="#screen01">01</a></li>
+                  <li><a href="#screen02">02</a></li>
+                  <li><a href="#screen03">03</a></li>
+               </ul>
+
+            </div>
          </div>
+
       </div>
       <main>
          <div class="main__content">
             <div class="grid__items-1">
-               <span class="first-page page" id="screen01"></span>
+               <span class="first-page page section" id="screen01"></span>
                <div class="item__subtitle">
                   <h3>Get started</h3>
                </div>
@@ -93,7 +95,7 @@
                <img src="./img/main_1.png" alt="">
             </div>
             <div class="grid__items-3">
-               <span class="second-page page" id="screen02"></span>
+               <span class="second-page page section" id="screen02"></span>
                <div class="item__subtitle">
                   <h3>Get started</h3>
                </div>
@@ -114,7 +116,7 @@
                <img src="./img/Main_2.png" alt="">
             </div>
             <div class="grid__items-5">
-               <span class="third-page page" id="screen03"></span>
+               <span class="third-page page section" id="screen03"></span>
                <div class="item__subtitle">
                   <h3>Get started</h3>
                </div>
@@ -131,7 +133,7 @@
                   <a href="##">read more</a>
                </div>
             </div>
-            <div class="grid__items-6" id="screen03">
+            <div class="grid__items-6">
                <img src="./img/main_3.png" alt="">
             </div>
          </div>

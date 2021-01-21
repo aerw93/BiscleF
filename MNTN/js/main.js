@@ -4,8 +4,6 @@ const header = document.querySelector('.hero-body');
 
 let header_height = header.offsetHeight;
 
-console.log(header_height);
-
 window.addEventListener('scroll', () => {
    let scroll = window.pageYOffset;
    
@@ -14,5 +12,32 @@ window.addEventListener('scroll', () => {
       element.style.transform = `translateY(${scroll * speed}px)`;
    })
 
-   hero_section.style.opacity = - scroll / (header_height / 2.4) + 3.5;
-})
+   hero_section.style.opacity = - scroll / (header_height / 1) + 1.8;
+});
+
+
+(function () {
+   //"use strict";
+ 
+   var section = document.querySelectorAll(".section");
+   var sections = {};
+   var i = 0;
+ 
+   Array.prototype.forEach.call(section, function (e) {
+     sections[e.id] = e.offsetTop;
+   });
+ 
+   window.onscroll = function () {
+     var scrollPosition =
+       document.documentElement.scrollTop || document.body.scrollTop;
+ 
+     for (i in sections) {
+       if (sections[i] <= scrollPosition) {
+         document.querySelector(".active").setAttribute("class", " ");
+         document
+           .querySelector("a[href*=" + i + "]")
+           .setAttribute("class", "active");
+       }
+     }
+   };
+ })();
