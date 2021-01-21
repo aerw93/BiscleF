@@ -280,6 +280,7 @@ body {
   font-weight: 700;
   font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   line-height: 1.7;
+  padding: 5px;
 }
 .hero__scroll a {
   position: relative;
