@@ -231,6 +231,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .menu__body {
+    display: none;
     opacity: 0;
     position: fixed;
     top: 0;
@@ -250,6 +251,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .menu__body.active {
+    display: none;
     opacity: 1;
     top: 70px;
     right: 0;
@@ -390,15 +392,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   object-fit: cover;
   transition: all 0.2s ease-in-out;
-  filter: saturate(30%);
-}
-.gallery-image:hover {
-  filter: saturate(100%);
-}
-@media screen and (max-width: 766px) {
-  .gallery-image {
-    filter: saturate(100%);
-  }
 }
 
 .gallery__items:nth-of-type(4n) {
