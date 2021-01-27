@@ -20,10 +20,10 @@ ibg();
    });
  })();
  // Шапка скролл
- window.addEventListener('scroll', function() {
-   let header = document.querySelector('.header');
-   header.classList.toggle('sticky', window.scrollY > 0 );
-});
+// window.addEventListener('scroll', function() {
+//   let header = document.querySelector('.header');
+//   header.classList.toggle('sticky', window.scrollY > 0 );
+//});
 // 
 function bodyLock() {
    const lockPaddingValue = window.innerWidth - document.querySelector('.page').offsetWidth + 'px';
