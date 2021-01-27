@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.8s ease;
   }
   .header.sticky .menu__body {
-    height: calc(100vh - 54px);
+    height: calc(100% - 54px);
     transition: all 0.8s ease;
   }
   .header.sticky .menu__body.active {
