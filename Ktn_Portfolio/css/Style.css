@@ -396,7 +396,6 @@ figure {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  touch-action: none;
   transition: all 0.2s ease-in-out;
   filter: saturate(30%);
 }
