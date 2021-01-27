@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .menu__list {
     align-items: center;
-    padding: 50px 0;
+    padding-top: 50px;
   }
   .menu__list li {
     padding: 25px 0;
