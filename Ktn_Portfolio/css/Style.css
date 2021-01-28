@@ -396,7 +396,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .swiper-container {
-  flex: 1 0 100%;
   width: 100%;
   min-height: 100%;
   display: flex;
