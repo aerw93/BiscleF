@@ -25,38 +25,3 @@ ibg();
    header.classList.toggle('sticky', window.scrollY > 0 );
 });
  
-//function bodyLock() {
-//   const lockPaddingValue = window.innerWidth - document.querySelector('.page').offsetWidth + 'px';
-   
-//   if (lockPadding.length > 0) {
-//      for (let index = 0; index < lockPadding.length; index++) {
-//         const el = lockPadding[index];
-//         el.style.paddingRight = lockPaddingValue;
-//   }
-//}
-//   body.style.paddingRight = lockPaddingValue;
-//   body.classList.add('lock');
-
-//   unlock = false;
-//   setTimeout(function () {
-//      unlock = true;
-//   }, timeout);
-//}
-
-//function bodyUnlock() {
-//   setTimeout(function () {
-//      if (lockPadding > 0) {
-//      for (let index = 0; index < lockPadding.length; index++) {
-//         const el = lockPadding[index];
-//         e.style.paddingRight = '0px';
-//      }
-//   }
-//      body.style.paddingRight = '0px';
-//      body.classList.remove('lock');
-//   }, timeout);
-
-//   unlock = false;
-//   setTimeout(function () {
-//      unlock = true;
-//   }, timeout);
-//}
