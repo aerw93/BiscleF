@@ -97,8 +97,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   z-index: 2;
@@ -392,13 +395,13 @@ h1, h2, h3, h4, h5, h6 {
   grid-row: span 2;
 }
 
+/*---------------------Slider -----------------------------*/
 .swiper-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
 }
 
 .swiper-slide {
-  height: 100vh;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -415,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 40px;
   text-align: center;
 }
-.swiper-slide img {
-  width: 100%;
-  height: 100vh;
+
+.fslightbox-open .page {
+  padding-right: 17px;
 }
