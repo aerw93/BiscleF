@@ -97,8 +97,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
 }
@@ -384,21 +387,22 @@ h1, h2, h3, h4, h5, h6 {
 .swiper-container {
   width: 100%;
   flex: 1 0 100%;
-  min-height: 100vh;
-  display: flex;
 }
 
-.swiper-wrapper {
-  flex: 1 0 100%;
-  height: 100vh;
+.fslightbox-open .gallery__body {
+  padding-right: 18.89px;
 }
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-flex;
-  justify-content: center;
-  align-items: center;
+.fslightbox-open .header__nav {
+  padding-right: 18.89px;
+}
+.fslightbox-open .toggle-menu {
+  margin-right: 18.89px;
+}
+@media screen and (max-width: 766px) {
+  .fslightbox-open .gallery__body,
+.fslightbox-open .swiper-pagination,
+.fslightbox-open .toggle-menu {
+    padding-right: 0;
+    margin-right: 0;
+  }
 }
