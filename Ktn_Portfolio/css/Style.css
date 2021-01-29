@@ -93,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrapper {
   min-height: 100%;
+  overflow: hidden;
 }
 
 .page {
@@ -103,22 +104,9 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   display: flex;
   flex-direction: column;
-  z-index: 2;
-  overflow: auto;
 }
 
-.main-screen {
-  flex: 1 0 100%;
-  position: relative;
-}
-.main-screen__bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
+/*----------------------header--------------------------*/
 .header {
   position: fixed;
   top: 0;
@@ -399,14 +387,17 @@ h1, h2, h3, h4, h5, h6 {
 .swiper-container {
   width: 100%;
   flex: 1 0 100%;
-  height: 100%;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.fslightbox-open .gallery__body {
+  padding-right: 17px;
+}
+.fslightbox-open .header__nav {
+  padding-right: 17px;
+}
+.fslightbox-open .toggle-menu {
+  margin-right: 17px;
+}
+.fslightbox-open .swiper-pagination {
+  margin-right: 17px;
 }

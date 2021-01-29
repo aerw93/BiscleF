@@ -4,10 +4,9 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/Style.css">
    <link rel="stylesheet" href="css/icons.css">
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-
    <title>Ktn</title>
 </head>
 
@@ -48,20 +47,21 @@
    </div>
 
 
-</header>         <div class="swiper-container">
-            <div class="swiper-wrapper">
-               <div class="swiper-slide ibg">
-                  <img src="img/Dirt_Road_Gates_.jpg" alt="Ops">
-               </div>
-               <div class="swiper-slide ibg">
-                  <img src="img/first_img.jpg " alt="Ops">
-               </div>
-               <div class="swiper-slide ibg">
-                  <img src="img/Dirt_Road_Gates_.jpg" alt="Ops">
-               </div>
-            </div>
-            <div class="swiper-pagination"></div>
-         </div>
+</header>
+<div class="swiper-container">
+   <div class="swiper-wrapper">
+      <div class="swiper-slide ibg">
+         <img src="img/Dirt_Road_Gates_.jpg" alt="Opss">
+      </div>
+      <div class="swiper-slide ibg">
+         <img src="img/first_img.jpg" alt="Opss">
+      </div>
+      <div class="swiper-slide ibg">
+         <img src="img/Dirt_Road_Gates_.jpg" alt="Opss">
+      </div>
+   </div>
+   <div class="swiper-pagination"></div>
+</div>
 <div class="gallery__body">
    <div class="gallery">
       <div class="gallery__items">
@@ -274,22 +274,22 @@
    </div>
 
 
-   <script type="text/javascript" src="js/popup_padding-right.js"></script>
+
    <script type="text/javascript" src="js/script.js"></script>
    <script src="js/fslightbox.js"></script>
-
-   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script>
       var swiper = new Swiper('.swiper-container', {
          loop: true,
          speed: 1200,
+         spaceBetween: 300,
          effect: 'coverflow',
          centeredSlides: true,
          slidesPerView: '1',
          coverflowEffect: {
             rotate: 50,
             stretch: 0,
-            depth: 100,
+            depth: 50,
             modifier: 1,
             slideShadows: true,
          },
@@ -297,7 +297,7 @@
             enabled: true,
          },
          autoplay: {
-            delay: 6000,
+            delay: 5000,
             disableOnInteraction: false,
          },
          pagination: {
