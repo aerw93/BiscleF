@@ -12,11 +12,11 @@ function bodyLock() {
    if (lockPadding.length > 0) {
        for (let index = 0; index < lockPadding.length; index++) {
          const el = lockPadding[index];
-         el.style.paddingRight = '17px';
+         el.style.paddingRight = '0px';
 
       }
    }
-   body.style.paddingRight =  '17px';
+   body.style.paddingRight =  '0px';
    body.classList.add('lock');
 
    ulock = false;
