@@ -1,4 +1,4 @@
-const lockPadding = document.querySelectorAll(".lock-padding");
+const lockPadding = document.querySelectorAll(".lock-padding, .swiper-container");
 const body = document.querySelector('.page');
 //const gallery = document.querySelectorAll("fslightbox-open");
 const timeout = 300;

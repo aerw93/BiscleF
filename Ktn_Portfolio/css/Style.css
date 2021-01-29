@@ -400,6 +400,11 @@ h1, h2, h3, h4, h5, h6 {
 .page.lock {
   overflow: hidden;
 }
+@media screen and (max-width: 766px) {
+  .page.lock {
+    overflow: auto;
+  }
+}
 
 .swiper-container {
   width: 100%;
@@ -408,7 +413,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .swiper-slide {
-  height: 100vh;
   text-align: center;
   font-size: 18px;
   background: #fff;
