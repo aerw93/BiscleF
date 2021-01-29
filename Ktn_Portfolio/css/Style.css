@@ -74,10 +74,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------------------- Main -------------------------------------*/
-html {
-  overflow-y: scroll;
-}
-
 .ibg {
   background-position: center;
   background-size: cover;
@@ -109,6 +105,7 @@ html {
   display: flex;
   flex-direction: column;
   z-index: 2;
+  overflow: auto;
 }
 
 .main-screen {
@@ -400,25 +397,22 @@ html {
 }
 
 /*---------------------Slider -----------------------------*/
+.page.lock {
+  overflow: hidden;
+}
+
 .swiper-container {
   width: 100%;
-  min-height: 100%;
+  flex: 1 0 100%;
+  height: 100%;
 }
 
 .swiper-slide {
+  height: 100vh;
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.swiper-slide h1, .swiper-slide h2 {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  color: #fff;
-  font-size: 40px;
-  text-align: center;
 }

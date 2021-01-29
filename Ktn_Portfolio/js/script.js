@@ -1,4 +1,3 @@
-
 function ibg(){
 
 let ibg=document.querySelectorAll(".ibg");
@@ -24,4 +23,4 @@ ibg();
    let header = document.querySelector('.header');
    header.classList.toggle('sticky', window.scrollY > 0 );
 });
- 
+// Padding for Scroll-y
