@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 /*-------------------------Galery ---------------------*/
 .gallery__body {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -384,20 +384,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*---------------------Slider -----------------------------*/
-.swiper-container {
-  width: 100%;
-  flex: 1 0 100%;
-}
-
-.fslightbox-open .gallery__body {
-  padding-right: 17px;
-}
-.fslightbox-open .header__nav {
-  padding-right: 17px;
-}
-.fslightbox-open .toggle-menu {
-  margin-right: 17px;
-}
-.fslightbox-open .swiper-pagination {
-  margin-right: 17px;
-}
