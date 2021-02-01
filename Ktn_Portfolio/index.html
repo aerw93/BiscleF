@@ -5,8 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-   <link rel="stylesheet" href="css/Style.css">
    <link rel="stylesheet" href="css/icons.css">
+   <link rel="stylesheet" href="css/Style.css">
    <title>Ktn</title>
 </head>
 
@@ -15,26 +15,25 @@
       <main class="page">
 <header class="header">
    <div class="header__row">
-      <!--<div class="header__logo">-->
-      <a class="header__logo" href="#main">
-         Ktn
-      </a>
-      <!--</div>-->
+      <div class="header__body-logo">
+         <a class="header__logo" href="#main">
+            <img src="img/Logo/Logo_KTN_4_3.png" id="logo-change" alt="Opps">
+         </a>
+      </div>
       <nav class="header__nav">
-
          <div class="menu__body" id="menu__body">
             <ul class="menu__list">
-               <li><a class="list__items" href="##">About</a></li>
                <li><a class="list__items" href="##">Love Stoty</a></li>
                <li><a class="list__items" href="##">Family</a></li>
-               <li><a class="list__items" href="##">Portrait</a>
+               <li><a class="list__items" href="##">Portrait</a></li>
+               <li><a class="list__items" href="##">About</a>
             </ul>
-            <div class="follow__content">
-               <!--<p>Hawe a yuestion?</p>-->
+            <a href="##" class="icon-email" id="toggle-contacts"></a>
+            <div class="follow__content" id="contacts">
                <div class="content__icons">
-                  <a href="#" class="icon-facebook"></a>
-                  <a href="#" class="icon-instagram"></a>
-                  <a href="#" class="icon-telegram"></a>
+                  <a href="#" class="icon-facebook content-icon"></a>
+                  <a href="#" class="icon-instagram content-icon"></a>
+                  <a href="#" class="icon-telegram content-icon"></a>
                </div>
             </div>
          </div>
@@ -270,7 +269,13 @@
          </a>
       </div>
    </div>
-</div>      </main>
+</div>
+<footer>
+   <div class="foter__body">
+      <h3>(c)Life is beautiful not because of things we see or the things we do. Life is beautiful because of people we
+         meet.</h3>
+   </div>
+</footer>      </main>
    </div>
 
 
@@ -282,7 +287,8 @@
       var swiper = new Swiper('.swiper-container', {
          loop: true,
          speed: 1200,
-         spaceBetween: 300,
+         spaceBetween: 0,
+
          effect: 'coverflow',
          centeredSlides: true,
          slidesPerView: '1',

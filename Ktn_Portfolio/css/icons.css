@@ -1,17 +1,17 @@
 @font-face {
   font-family: "icons";
-  src: url("../fonts/icons.eot?tntc2x");
-  src: url("../fonts/icons.eot?tntc2x#iefix") format("embedded-opentype"),
-    url("../fonts/icons.ttf?tntc2x") format("truetype"),
-    url("../fonts/icons.woff?tntc2x") format("woff"),
-    url("../fonts/icons.svg?tntc2x#icons") format("svg");
+  src: url("../webfonts/icons.eot?8vqjj7");
+  src: url("../webfonts/icons.eot?8vqjj7#iefix") format("embedded-opentype"),
+    url("../webfonts/icons.ttf?8vqjj7") format("truetype"),
+    url("../webfonts/icons.woff?8vqjj7") format("woff"),
+    url("../webfonts/icons.svg?8vqjj7#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icons" !important;
   speak: never;
@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-email:before {
+  content: "\e903";
+}
 .icon-facebook:before {
   content: "\e900";
 }
