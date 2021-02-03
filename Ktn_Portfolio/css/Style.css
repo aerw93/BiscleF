@@ -17,6 +17,7 @@
 
 a:focus, a:active {
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 nav, footer, header, aside {
@@ -45,6 +46,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button::-moz-focus-inner {
@@ -106,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 
-/*----------------------header--------------------------*/
 .header {
   position: fixed;
   top: 0;
@@ -328,7 +329,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   background-color: transparent;
-  outline: none;
   cursor: pointer;
 }
 .toggle-menu span:first-child {
@@ -465,13 +465,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 20%;
   }
 }
-/*-------------------------Galery ---------------------*/
 .gallery__body {
   position: relative;
   max-width: 100%;
   margin: 0;
   padding: 0;
-  flex: 1 0;
 }
 
 .gallery {
@@ -495,31 +493,29 @@ h1, h2, h3, h4, h5, h6 {
   grid-row: span 2;
 }
 
-/*---------------------Slider -----------------------------*/
 .swiper-container {
   width: 100%;
   flex: 1 0 100%;
 }
 
 .fslightbox-open .gallery__body {
-  padding-right: 18.89px;
+  padding-right: 17px;
 }
 .fslightbox-open .header__nav {
-  padding-right: 18.89px;
+  padding-right: 17px;
 }
 .fslightbox-open .toggle-menu {
-  margin-right: 18.89px;
+  margin-right: 17px;
 }
-
 @media screen and (max-width: 766px) {
-  .gallery__body,
-.swiper-pagination,
-.toggle-menu {
+  .fslightbox-open .gallery__body,
+.fslightbox-open .swiper-pagination,
+.fslightbox-open .toggle-menu {
     padding-right: 0;
     margin-right: 0;
   }
 }
-/*------------------Footer -----------------------------*/
+
 footer {
   min-height: 100px;
   padding: 20px;
