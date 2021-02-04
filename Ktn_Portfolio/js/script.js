@@ -16,6 +16,7 @@ ibg();
      event.preventDefault();
      var menu = document.getElementById('menu__body');
      menu.classList.toggle('active');
+     
    });
  })();
 //  Шапка скролл
@@ -43,21 +44,21 @@ ibg();
    }
  };
 // Function hide- showeds Contacts_items on click over
-//const btnContacts = document.querySelector('.icon-email');
-//const menuContacts = document.querySelector('.follow__content');
+const btnContacts = document.querySelector('.icon-email');
+const menuContacts = document.querySelector('.follow__content');
 
-// document.addEventListener('click', function(e) {
-//    const target = e.target;
-//    const its_menu = target == menuContacts || menuContacts.contains(target);
-//    const its_btnMenu = target == btnContacts;
-//    const menu_is_active = menuContacts.classList.contains('open');
+ document.addEventListener('click', function(e) {
+    const target = e.target;
+    const its_menu = target == menuContacts || menuContacts.contains(target);
+    const its_btnMenu = target == btnContacts;
+    const menu_is_active = menuContacts.classList.contains('open');
 
-//    if (!its_menu && !its_btnMenu && menu_is_active) {
-//      menuContacts.classList.remove('open');
-//  }
-// });
+    if (!its_menu && !its_btnMenu && menu_is_active) {
+      menuContacts.classList.remove('open');
+  }
+ });
 
-//// Function hide-nav_menu on click over menu
+// Function hide-nav_menu on click over menu
 //const btnBurger = document.querySelector('.toggle-menu');
 //const menuBurger = document.querySelector('.menu__body');
 
@@ -71,3 +72,4 @@ ibg();
 //      menuBurger.classList.remove('active');
 //  }
 // });
+

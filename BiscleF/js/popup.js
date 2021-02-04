@@ -60,7 +60,7 @@ function bodyLock() {
          el.style.paddingRight = lockPaddingValue;
    }
 }
-   body.style.paddingRight = lockPaddingValue;
+   body.style.paddingRight = '17px';
    body.classList.add('lock');
 
    unlock = false;

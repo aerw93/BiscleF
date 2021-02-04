@@ -190,15 +190,6 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 50px;
   }
 }
-.header__body-logo .header__logo img .icon-email {
-  align-self: flex-end;
-  margin-left: 30px;
-  font-size: calc(20px + 5 * ((100vw - 320px) / 1600));
-}
-.header__body-logo .header__logo img .icon-email:hover {
-  color: #007aff;
-  transition: color 0.5s ease;
-}
 @media (max-width: 766px) {
   .header__body-logo .icon-email:before {
     display: none;
@@ -220,9 +211,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding-left: 30px;
   font-size: calc(20px + 15 * ((100vw - 320px) / 1600));
+  text-decoration: none;
 }
 .header__nav .menu__body .icon-email:hover {
   bottom: 2px;
+}
+.header__nav .menu__body .icon-email:active {
+  bottom: 0;
 }
 
 .follow__content {
@@ -399,6 +394,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .list__items:hover {
   bottom: 3px;
+}
+.list__items:active {
+  bottom: 0;
 }
 @media screen and (max-width: 766px) {
   .list__items {
