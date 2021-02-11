@@ -12,10 +12,22 @@ ibg();
 // Меню бургер
 (function () {
    var click = document.getElementById('menu-active');
+   var btnBurger = document.querySelector('.toggle-menu');
+   const menuBurger = document.querySelector('.menu__body');
+
    click.addEventListener('click', function (event) {
      event.preventDefault();
      var menu = document.getElementById('menu__body');
      menu.classList.toggle('active');
+   //  if (menu.classList.contains('active')) {
+   //      document.addEventListener('click', function (e) {
+   //         e.preventDefault();
+   //            if (!menuBurger && !btnBurger) {
+   //            menu.classList.remove('active');
+   //            }
+   //            console.log('Kto tyt?')
+   //      })
+   //   }
      
    });
  })();
@@ -38,9 +50,9 @@ ibg();
  function logoChange () {
    const logoImg = document.getElementById('logo-change');
    if (window.scrollY > 0) {
-      logoImg.src = "img/Logo/Logo_KTN_4_2.png";
+      logoImg.src = "../img/Logo/Logo_KTN_4_2.png";
    } else {
-      logoImg.src = "img/Logo/Logo_KTN_4_3.png";
+      logoImg.src = "../img/Logo/Logo_KTN_4_3.png";
    }
  };
 // Function hide- showeds Contacts_items on click over
@@ -73,3 +85,44 @@ const menuContacts = document.querySelector('.follow__content');
 //  }
 // });
 
+//
+// Анимация при скроле 
+//==================================================================================================
+//==================================================================================================
+
+const animItems = document.querySelectorAll('.anim-items');
+
+if (animItems.length > 0) {
+   window.addEventListener('scroll', animOnScroll);
+      function animOnScroll() {
+          for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 5;
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+            if (animItemHeight > window.innerHeight) { 
+               animItemPoint = window.innerHeight - window.innerHeight / animStart;
+            }
+
+            if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+               animItem.classList.add('_active');
+            } else {
+               if (!animItem.classList.contains('_anim-no-hide')) {
+               animItem.classList.remove('_active');
+             }
+            }
+         }
+   }
+   function offset(el) {
+      const rect = el.getBoundingClientRect(),
+         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+   }
+   setTimeout(() => {
+      animOnScroll();
+   }, 300);
+}
