@@ -1,5 +1,5 @@
-../#source/
-#source/
+/#source
+/#source
 .vscode
 prepros.config
 package-lock.json
