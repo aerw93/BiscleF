@@ -171,7 +171,8 @@ h1, h2, h3, h4, h5, h6 {
 .header__nav .menu__body .icon-email {
   position: relative;
   align-self: flex-start;
-  color: #007aff;
+  color: #267ad4;
+  filter: brightness(120%);
   transition: color 0.5s ease;
   position: relative;
   padding-left: 30px;
@@ -200,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .follow__content .content__icons .content-icon {
   text-decoration: none;
-  color: #757575;
+  color: #9fa7af;
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -222,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .follow__content .content__icons .content-icon:hover {
   font-size: 35px;
-  color: red;
+  color: #267ad4;
 }
 .follow__content .content__icons .content-icon:active {
   font-size: 32px;
@@ -252,12 +253,12 @@ h1, h2, h3, h4, h5, h6 {
   .follow__content.follow__content {
     position: static;
     width: 100%;
-    height: 140px;
+    height: 200px;
     opacity: 1;
   }
   .follow__content .content__icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
   .follow__content .content__icons .content-icon {
@@ -270,12 +271,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: font-size 0.15s linear;
   }
   .follow__content .content__icons .content-icon:hover {
-    font-size: 40px;
+    font-size: 50px;
     color: red;
     transition: font-size 0.1s linear;
   }
   .follow__content .content__icons .content-icon:active {
-    font-size: 39px;
+    font-size: 32px;
     transition: font-size 0.05s linear;
   }
 }
@@ -474,7 +475,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 footer {
-  min-height: 80px;
+  min-height: 70px;
   margin-top: auto;
   padding: 10px;
   display: flex;
@@ -485,7 +486,7 @@ footer {
 }
 footer .foter__body {
   text-align: center;
-  font-size: calc(16px + 11 * ((100vw - 320px) / 1600));
+  font-size: calc(12px + 12 * ((100vw - 320px) / 1600));
   font-family: Kalam;
   line-height: 1.3;
 }
@@ -647,13 +648,15 @@ footer .foter__body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  padding: 30px 0;
+  padding: 0 0 15px;
 }
 
 .portfolio__title {
   text-align: center;
   font-size: calc(53px + -5 * ((100vw - 320px) / 1600));
   font-family: Kalam;
+  color: #4e4646;
+  position: relative;
 }
 
 .portfolio__body {
@@ -669,7 +672,7 @@ footer .foter__body {
   flex: 1 1 33%;
   display: flex;
   padding: 25px;
-  background: linear-gradient(90deg, rgba(169, 161, 161, 0.09) 100%, 0%, #fff);
+  background: linear-gradient(90deg, rgba(169, 161, 161, 0.19) 85%, 0%, #fff);
   opacity: 0;
   transition: all 1.1s ease;
 }
@@ -678,6 +681,30 @@ footer .foter__body {
 .portfolio__portrait._active {
   transform: translate(0px, 0px);
   opacity: 1;
+}
+@media only screen and (max-width: 766px) {
+  .portfolio__love,
+.portfolio__family,
+.portfolio__portrait {
+    flex-direction: column;
+    background: linear-gradient(360deg, rgba(169, 161, 161, 0.39) 85%, 0%, #fff);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .portfolio__love,
+.portfolio__family,
+.portfolio__portrait {
+    padding: 15px 10px;
+  }
+}
+
+.portfolio__family {
+  background: linear-gradient(270deg, rgba(169, 161, 161, 0.19) 85%, 0%, #fff);
+}
+@media only screen and (max-width: 766px) {
+  .portfolio__family {
+    background: linear-gradient(360deg, rgba(169, 161, 161, 0.39) 85%, 0%, #fff);
+  }
 }
 
 .portfolio__love,
@@ -689,12 +716,56 @@ footer .foter__body {
   flex-direction: row-reverse;
   transform: translate(350%, 0px);
 }
+@media only screen and (max-width: 766px) {
+  .portfolio__family {
+    flex-direction: column;
+  }
+}
 
 .love__content,
 .portrait__content,
 .family__content {
   flex: 1 1 50%;
-  padding: 20px;
+  padding: 0 40px;
+  align-self: center;
+  order: 0;
+}
+@media only screen and (min-width: 1920px) {
+  .love__content,
+.portrait__content,
+.family__content {
+    padding: 0 80px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .love__content,
+.portrait__content,
+.family__content {
+    flex: 1 1 43%;
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .love__content,
+.portrait__content,
+.family__content {
+    padding: 0 0 0 15px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .love__content,
+.portrait__content,
+.family__content {
+    order: 1;
+    padding: 20px 0 0 30px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .love__content,
+.portrait__content,
+.family__content {
+    padding: 15px 0 0 10px;
+  }
 }
 .love__content h2,
 .portrait__content h2,
@@ -703,14 +774,35 @@ footer .foter__body {
   font-size: calc(30px + 12 * ((100vw - 320px) / 1600));
   line-height: 1.4;
 }
+@media only screen and (max-width: 766px) {
+  .love__content h2,
+.portrait__content h2,
+.family__content h2 {
+    padding: 5px 0;
+  }
+}
 .love__content p,
 .portrait__content p,
 .family__content p {
   font-family: "Rubik";
-  font-size: calc(20px + 6 * ((100vw - 320px) / 1600));
+  font-size: calc(18px + 8 * ((100vw - 320px) / 1600));
   line-height: 1.4;
-  padding-bottom: 20px;
+  padding: 10px 0 55px 0;
   max-width: 90%;
+}
+@media only screen and (max-width: 1440px) {
+  .love__content p,
+.portrait__content p,
+.family__content p {
+    padding-bottom: 35px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .love__content p,
+.portrait__content p,
+.family__content p {
+    padding-bottom: 20px;
+  }
 }
 .love__content a,
 .portrait__content a,
@@ -719,7 +811,7 @@ footer .foter__body {
   display: inline-block;
   padding: 10px 15px;
   border-radius: 10px;
-  background-color: #007aff;
+  background-color: rgba(38, 122, 212, 0.72);
   color: white;
   transition: all 0.5s ease;
   line-height: 1.4;
@@ -729,17 +821,58 @@ footer .foter__body {
 .love__content a:hover,
 .portrait__content a:hover,
 .family__content a:hover {
-  filter: brightness(140%);
-  letter-spacing: 2px;
+  filter: brightness(120%);
+  transform: scale(1.05);
+}
+
+.family__content {
+  padding: 15px 0 0 65px;
+}
+@media only screen and (max-width: 1024px) {
+  .family__content {
+    padding: 15px 0 0 40px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .family__content {
+    padding: 15px 0 0 10px;
+  }
 }
 
 .love__image,
 .portrait__image,
 .family__image {
   flex: 1 1 50%;
-  min-height: 400px;
-  max-height: 80%;
+  min-height: 500px;
+  max-height: 100%;
+  max-width: 100%;
   align-self: center;
-  border-radius: 20px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  order: 1;
+}
+@media only screen and (min-width: 1920px) {
+  .love__image,
+.portrait__image,
+.family__image {
+    min-height: 600px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .love__image,
+.portrait__image,
+.family__image {
+    flex: 1 1 55%;
+    min-height: 430px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  .love__image,
+.portrait__image,
+.family__image {
+    flex: 1 1 100%;
+    min-height: 350px;
+    order: 0;
+    align-self: auto;
+  }
 }

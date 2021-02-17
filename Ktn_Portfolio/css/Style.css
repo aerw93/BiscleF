@@ -208,7 +208,8 @@ h1, h2, h3, h4, h5, h6 {
 .header__nav .menu__body .icon-email {
   position: relative;
   align-self: flex-start;
-  color: #007aff;
+  color: #267ad4;
+  filter: brightness(120%);
   transition: color 0.5s ease;
   position: relative;
   padding-left: 30px;
@@ -237,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .follow__content .content__icons .content-icon {
   text-decoration: none;
-  color: #757575;
+  color: #9fa7af;
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -259,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .follow__content .content__icons .content-icon:hover {
   font-size: 35px;
-  color: red;
+  color: #267ad4;
 }
 .follow__content .content__icons .content-icon:active {
   font-size: 32px;
@@ -289,12 +290,12 @@ h1, h2, h3, h4, h5, h6 {
   .follow__content.follow__content {
     position: static;
     width: 100%;
-    height: 140px;
+    height: 200px;
     opacity: 1;
   }
   .follow__content .content__icons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
   .follow__content .content__icons .content-icon {
@@ -307,12 +308,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: font-size 0.15s linear;
   }
   .follow__content .content__icons .content-icon:hover {
-    font-size: 40px;
+    font-size: 50px;
     color: red;
     transition: font-size 0.1s linear;
   }
   .follow__content .content__icons .content-icon:active {
-    font-size: 39px;
+    font-size: 32px;
     transition: font-size 0.05s linear;
   }
 }
@@ -484,6 +485,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   padding: 10px;
 }
+@media only screen and (min-width: 1920px) {
+  .gallery {
+    grid-template-columns: repeat(7, minmax(250px, 1fr));
+  }
+}
 
 .gallery-image {
   display: block;
@@ -497,13 +503,18 @@ h1, h2, h3, h4, h5, h6 {
   grid-row: span 2;
 }
 
+.gallery__items:nth-of-type(36),
+.gallery__items:nth-of-type(40) {
+  grid-row: span 1;
+}
+
 .swiper-container {
   width: 100%;
   flex: 1 0 100%;
 }
 
 footer {
-  min-height: 80px;
+  min-height: 70px;
   margin-top: auto;
   padding: 10px;
   display: flex;
@@ -514,7 +525,7 @@ footer {
 }
 footer .foter__body {
   text-align: center;
-  font-size: calc(16px + 11 * ((100vw - 320px) / 1600));
+  font-size: calc(12px + 12 * ((100vw - 320px) / 1600));
   font-family: Kalam;
   line-height: 1.3;
 }
