@@ -50,9 +50,9 @@ ibg();
  function logoChange () {
    const logoImg = document.getElementById('logo-change');
    if (window.scrollY > 0) {
-      logoImg.src = "./img/Logo/Logo_KTN_4_2.png";
+      logoImg.src = "../img/Logo/Logo_KTN_4_2.png";
    } else {
-      logoImg.src = "./img/Logo/Logo_KTN_4_3.png";
+      logoImg.src = "../img/Logo/Logo_KTN_4_3.png";
    }
  };
 // Function hide- showeds Contacts_items on click over
