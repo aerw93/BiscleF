@@ -226,9 +226,9 @@ h1, h2, h3, h4, h5, h6 {
 .follow__content {
   position: absolute;
   top: 50px;
-  right: -150px;
-  width: 60px;
-  height: 200px;
+  right: -170px;
+  width: 70px;
+  height: 220px;
   opacity: 1;
 }
 .follow__content .content__icons {
@@ -243,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   position: absolute;
   left: 50%;
-  font-size: 32px;
+  font-size: 38px;
   transform: translate(-50%, -50%);
   transition-property: left, opacity, visibility;
   transition-duration: 1.2s;
@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
 .follow__content.open .content-icon {
   left: -170%;
   opacity: 1;
-  padding: 15px;
+  padding: 25px 0;
   transition-property: opacity, left, visibility;
   transition-duration: 0.6s;
   transition-timing-function: ease;
@@ -295,7 +295,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .follow__content .content__icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   .follow__content .content__icons .content-icon {
@@ -308,12 +308,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: font-size 0.15s linear;
   }
   .follow__content .content__icons .content-icon:hover {
-    font-size: 50px;
+    font-size: 39px;
     color: red;
     transition: font-size 0.1s linear;
   }
   .follow__content .content__icons .content-icon:active {
-    font-size: 32px;
+    font-size: 38px;
     transition: font-size 0.05s linear;
   }
 }
