@@ -309,7 +309,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .follow__content .content__icons .content-icon:hover {
     font-size: 39px;
-    color: red;
     transition: font-size 0.1s linear;
   }
   .follow__content .content__icons .content-icon:active {
