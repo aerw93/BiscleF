@@ -95,3 +95,13 @@ function logoChange () {
       logoImg.src = "../img/Logo/Logo_KTN_4_3.png";
    }
  };
+function ibg(){
+
+   let ibg=document.querySelectorAll(".ibg");
+   for (var i = 0; i < ibg.length; i++) {
+   if(ibg[i].querySelector('img')){
+   ibg[i].style.backgroundImage = 'url('+ibg[i].querySelector('img').getAttribute('src')+')';
+   }
+   }
+   }
+   ibg();
