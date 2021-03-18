@@ -240,14 +240,12 @@ header.sticky .header__logo a {
 	}
 }
 @media only screen and (max-width: 766px) {
-	/* header {
-		min-height: 70px;
-		padding: 0 40px;
+	header {
+		padding: 10px 0;
 	}
 	header.sticky {
-		height: 70px;
-		padding: 10px 30px;
-	} */
+		padding: 10px 0;
+	}
 	header.sticky ul li a {
 		color: rgb(0, 0, 0);
 	}
@@ -277,16 +275,19 @@ header.sticky .header__logo a {
 	.header__ul li:hover:after {
 		opacity: 0;
 	}
+	.header__logo {
+		margin-left: 30px;
+	}
 	.header__logo a {
 		font-size: calc(50px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
 	}
 }
 @media only screen and (max-width: 425px) {
 	.header {
-		padding: 10px 20px;
+		padding: 10px 0;
 	}
 	.header.sticky {
-		padding: 10px 20px;
+		padding: 10px 0;
 	}
 }
 /* ------------------------Burger ---------------------------------*/
@@ -332,8 +333,9 @@ header.sticky .header__logo a {
 		z-index: -10;
 	}
 	.header__nav-burg {
-		right: -5px;
+		right: 0;
 		display: block;
+		margin-right: 27px;
 	}
 	.header__nav.is-open .header__dropdown {
 		opacity: 1;
@@ -636,7 +638,7 @@ header.sticky .header__logo a {
 		padding: 20px 40px 0;
 		text-align: center;
 	}
-	.second__r-screen {
+	/* .second__r-screen {
 		margin-bottom: 75px;
 	}
 	.option-3.active {
@@ -649,6 +651,40 @@ header.sticky .header__logo a {
 	.option-1.active {
 		left: 50%;
 		top: 80%;
+	} */
+	.second__r-screen {
+		margin: 0;
+	}
+	.option-1,
+	.option-2,
+	.option-3 {
+		position: relative;
+		display: block;
+		margin: 10px 0;
+		opacity: 1;
+	}
+	.second__r-screen a::before {
+		content: "";
+		top: 50%;
+		left: 50%;
+		width: 8px;
+		height: 8px;
+		transform: translate(-50%, -50%);
+		animation: none;
+		cursor: none;
+		pointer-events: none;
+	}
+	.second__r-screen .span-clicker1,
+	.second__r-screen .span-clicker2,
+	.second__r-screen .span-clicker3 {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		text-indent: 10em;
+		overflow: hidden;
+		text-decoration: none;
+		background-color: rgba(233, 227, 227, 0.47);
+		border-radius: 50%;
 	}
 }
 @media only screen and (max-width: 600px) {
@@ -671,7 +707,7 @@ header.sticky .header__logo a {
 	.second__l-screen p:last-child {
 		display: none;
 	}
-	.second__r-screen {
+	/* .second__r-screen {
 		margin: 0;
 	}
 	.option-1,
@@ -704,7 +740,7 @@ header.sticky .header__logo a {
 		text-decoration: none;
 		background-color: rgba(233, 227, 227, 0.47);
 		border-radius: 50%;
-	}
+	} */
 }
 /*-----------------------THird-screen ------------------------*/
 .third__screen {
@@ -1487,10 +1523,6 @@ address::before {
 	address::before {
 		top: 0;
 	}
-	.input__submit {
-		text-align: center;
-		padding: 30px;
-	}
 }
 /*-----------------------------------Footer--------------------------------------------------*/
 .footer {
@@ -1891,6 +1923,11 @@ address::before {
 .modal__window-buy.open .popup__content-buy {
 	transform: translate(0px, 0);
 	opacity: 1;
+}
+.popup__close1 {
+	position: relative;
+	top: 0;
+	left: 0;
 }
 @media only screen and (max-width: 1024px) {
 	.popup__content-buy {

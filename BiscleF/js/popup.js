@@ -17,7 +17,7 @@ if (popupLinks.length > 0) {
 		});
 	}
 }
-const popupCloseIcon = document.querySelectorAll('.popup__close');
+const popupCloseIcon = document.querySelectorAll('.popup__close, .popup__close1');
 if (popupCloseIcon.length > 0) {
 	for (let index = 0; index < popupCloseIcon.length; index++) {
 		const el = popupCloseIcon[index];
