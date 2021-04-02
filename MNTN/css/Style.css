@@ -612,7 +612,7 @@ main {
   display: inline-block;
 }
 .item__more a:hover {
-  left: 1px;
+  left: 2px;
 }
 .item__more a::before {
   position: absolute;
