@@ -1506,7 +1506,7 @@ address::before {
 		width: 100%;
 	}
 	.eight__r-screen {
-		padding: 0 30px;
+		padding: 0 15px;
 	}
 }
 @media only screen and (max-width: 425px) {
