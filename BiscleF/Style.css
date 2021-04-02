@@ -1883,7 +1883,7 @@ address::before {
 	transform: translate(0px, -200%);
 	transition: all 0.8s ease 0s;
 	overflow: scroll;
-	max-height: 80vh;
+	max-height: 90vh;
 }
 .popup__content-buy::-webkit-scrollbar {
 	display: none;
