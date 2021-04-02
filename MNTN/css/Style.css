@@ -614,15 +614,12 @@ main {
 .item__more a:hover {
   left: 1px;
 }
-.item__more a:after {
-  content: "";
+.item__more a::before {
   position: absolute;
-  top: 45%;
-  right: -40%;
-  transform: translateY(-50%);
-  height: 16px;
-  width: 24px;
-  background: url(/img/arrow_main-right.png) no-repeat;
+  top: -50%;
+  right: -50%;
+  transform: rotate(270deg) translate(-20%, -30%);
+  color: #fbd784;
 }
 
 .grid__items-1 {
