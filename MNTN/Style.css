@@ -613,7 +613,6 @@ main {
 }
 .item__more a:hover {
   left: 1px;
-  transition: left 1.2s ease;
 }
 .item__more a::before {
   position: absolute;
