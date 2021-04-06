@@ -1,65 +1,147 @@
 
 // Меню бургер
-(function () {
-   var click = document.getElementById('menu-active');
-   var btnBurger = document.querySelector('.toggle-menu');
-   const menuBurger = document.querySelector('.menu__body');
 
-   click.addEventListener('click', function (event) {
-     event.preventDefault();
-     var menu = document.getElementById('menu__body');
-     menu.classList.toggle('active');
-   //  if (menu.classList.contains('active')) {
-   //      document.addEventListener('click', function (e) {
-   //         e.preventDefault();
-   //            if (!menuBurger && !btnBurger) {
-   //            menu.classList.remove('active');
-   //            }
-   //            console.log('Kto tyt?')
-   //      })
-   //   }
-     
-   });
- })();
 //  Шапка скролл
- window.addEventListener('scroll', function() {
-   let header = document.querySelector('.header');
-   header.classList.toggle('sticky', window.scrollY > 0);
-   logoChange();
+window.addEventListener('scroll', function () {
+	let header = document.querySelector('.header');
+	header.classList.toggle('sticky', window.scrollY > 0);
+	logoChange();
 });
+
 // Contacts toogleMenu 
 (function () {
-   var click = document.getElementById('toggle-contacts');
-   click.addEventListener('click', function (event) {
-     event.preventDefault();
-     var menu = document.getElementById('contacts');
-     menu.classList.toggle('open');
-   });
- })();
-// Function hide- showeds Contacts_items on click over
+	var click = document.getElementById('toggle-contacts');
+	click.addEventListener('click', function (event) {
+		event.preventDefault();
+		var menu = document.getElementById('contacts');
+		menu.classList.toggle('open');
+	});
+})();
+
 const btnContacts = document.querySelector('.icon-email');
 const menuContacts = document.querySelector('.follow__content');
 
- document.addEventListener('click', function(e) {
-    const target = e.target;
-    const its_menu = target == menuContacts || menuContacts.contains(target);
-    const its_btnMenu = target == btnContacts;
-    const menu_is_active = menuContacts.classList.contains('open');
+document.addEventListener('click', function (e) {
+	const target = e.target;
+	const its_menu = target == menuContacts || menuContacts.contains(target);
+	const its_btnMenu = target == btnContacts;
+	const menu_is_active = menuContacts.classList.contains('open');
+	const links = document.querySelectorAll('.content-icon');
 
-    if (!its_menu && !its_btnMenu && menu_is_active) {
-      menuContacts.classList.remove('open');
-  }
- });
+	if (!its_menu && !its_btnMenu && menu_is_active) {
+		menuContacts.classList.remove('open');
+	}
+	for (i = 0; i < links.length; i++) {
+		links[i].addEventListener('click', function () {
+			menuContacts.classList.remove('open');
+		})
+	}
+});
 //
 // Анимация при скроле 
 //==================================================================================================
 //==================================================================================================
- // Function logo-img src=change
- //==================================================================================================
- //==================================================================================================
-  // Function ibg-img
- //==================================================================================================
- //==================================================================================================
+// Function logo-img src=change
+//==================================================================================================
+//==================================================================================================
+// Function ibg-img
+/*==================================================================================================*/
+/*==================================================================================================*/
+//
+//---------------------------preventDefault
+let imgLink = document.querySelectorAll('img');
+for (i = 1; i < imgLink.length; i++) {
+	imgLink[i].oncontextmenu = (function (e) {
+		e.preventDefault();
+	})
+};
+// --------------------------drag false
+document.ondragstart = noselect;
+function noselect() { return false; }
+
+
+//---------------------Init Swiper----------------------
+var swiper = new Swiper('.swiper-container', {
+	loop: true,
+	speed: 1200,
+	spaceBetween: 0,
+	effect: 'coverflow',
+	centeredSlides: true,
+	slidesPerView: '1',
+	coverflowEffect: {
+		rotate: 50,
+		stretch: 0,
+		depth: 50,
+		modifier: 1,
+		slideShadows: true,
+	},
+	keyboard: {
+		enabled: true,
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		clickable: true,
+		el: '.swiper-pagination',
+	},
+	lazy: {
+		loadPrevNext: true,
+	},
+});
+//-----------------------------------fslightbox -------------------------------
+
+
+fsLightboxInstances['gallery'].props.onOpen = (fsLightbox) => {
+
+	document.onselectstart = noselect;
+
+	document.oncontextmenu = noselect;
+
+	function noselect() { return false; }
+
+}
+fsLightboxInstances['gallery'].props.onClose = (fsLightbox) => {
+
+	document.onselectstart = noselect;
+
+	document.oncontextmenu = noselect;
+
+	function noselect() { return true; }
+}
+
+
+
+(function () {
+	let click = document.getElementById('menu-active');
+	let btnBurger = document.querySelector('.toggle-menu');
+	let menuBurg = document.querySelector('.menu__body');
+	let linksContact = document.querySelectorAll('.content-icon');
+	let linksPage = document.querySelectorAll('.list__items, .content-icon');
+
+	click.addEventListener('click', function (event) {
+		event.preventDefault();
+		var menu = document.getElementById('menu__body');
+		menu.classList.toggle('active');
+		document.body.classList.toggle('_lock');
+
+		window.addEventListener('click', function (e) {
+			const target = e.target;
+			if (!target.closest('.menu__body') && !target.closest('.toggle-menu')) {
+				menuBurg.classList.remove('active')
+				document.body.classList.remove('_lock');
+			}
+		});
+		for (i = 0; i < linksPage.length; i++) {
+			linksPage[i].addEventListener('click', function () {
+				menuBurg.classList.remove('active')
+				document.body.classList.remove('_lock');
+			})
+		}
+	});
+})();
+
 
 const animItems = document.querySelectorAll('.anim-items');
 

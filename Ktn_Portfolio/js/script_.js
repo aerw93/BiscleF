@@ -2,54 +2,99 @@
 //==================================================================================================
 //==================================================================================================
 
- // Function logo-img src=change
- //==================================================================================================
- //==================================================================================================
+// Function logo-img src=change
+//==================================================================================================
+//==================================================================================================
 
-   // Function ibg-img
- //==================================================================================================
- //==================================================================================================
- // Меню бургер
-(function () {
-   var click = document.getElementById('menu-active');
-   var btnBurger = document.querySelector('.toggle-menu');
-   const menuBurger = document.querySelector('.menu__body');
+// Function ibg-img
+//==================================================================================================
+//==================================================================================================
+// Меню бургер
+//==================================================================================================
+//==================================================================================================
 
-   click.addEventListener('click', function (event) {
-     event.preventDefault();
-     var menu = document.getElementById('menu__body');
-     menu.classList.toggle('active');
-   });
- })();
 //  Шапка скролл
- window.addEventListener('scroll', function() {
-   let header = document.querySelector('.header');
-   header.classList.toggle('sticky', window.scrollY > 0);
-   logoChange();
+//-------------------------------------------------------------------
+window.addEventListener('scroll', function () {
+	let header = document.querySelector('.header');
+	header.classList.toggle('sticky', window.scrollY > 0);
+	logoChange();
 });
 // Contacts toogleMenu 
+//------------------------------------------------------------------------
 (function () {
-   var click = document.getElementById('toggle-contacts');
-   click.addEventListener('click', function (event) {
-     event.preventDefault();
-     var menu = document.getElementById('contacts');
-     menu.classList.toggle('open');
-   });
- })();
+	var click = document.getElementById('toggle-contacts');
+	click.addEventListener('click', function (event) {
+		event.preventDefault();
+		var menu = document.getElementById('contacts');
+		menu.classList.toggle('open');
+	});
+})();
+//-------------------------------------------------------------------------
 // Function hide- showeds Contacts_items on click over
 const btnContacts = document.querySelector('.icon-email');
 const menuContacts = document.querySelector('.follow__content');
 
- document.addEventListener('click', function(e) {
-    const target = e.target;
-    const its_menu = target == menuContacts || menuContacts.contains(target);
-    const its_btnMenu = target == btnContacts;
-    const menu_is_active = menuContacts.classList.contains('open');
+document.addEventListener('click', function (e) {
+	const target = e.target;
+	const its_menu = target == menuContacts || menuContacts.contains(target);
+	const its_btnMenu = target == btnContacts;
+	const menu_is_active = menuContacts.classList.contains('open');
+	const links = document.querySelectorAll('.content-icon');
 
-    if (!its_menu && !its_btnMenu && menu_is_active) {
-      menuContacts.classList.remove('open');
-  }
- });
+
+	if (!its_menu && !its_btnMenu && menu_is_active) {
+		menuContacts.classList.remove('open');
+	}
+	for (i = 0; i < links.length; i++) {
+		links[i].addEventListener('click', function () {
+			menuContacts.classList.remove('open');
+		})
+	}
+});
+
+//------------------------------------Fs-lightbox_Open------------------
+
+fsLightboxInstances['gallery'].props.onOpen = (fsLightbox) => {
+
+	document.onselectstart = noselect;
+
+	document.oncontextmenu = noselect;
+
+	function noselect() { return false; }
+
+}
+fsLightboxInstances['gallery'].props.onClose = (fsLightbox) => {
+
+	document.onselectstart = noselect;
+
+	document.oncontextmenu = noselect;
+
+	function noselect() { return true; }
+}
+
+//---------------------Slider inint---------------------------
+var swiper = new Swiper('.swiper-container', {
+	loop: true,
+	speed: 1200,
+	spaceBetween: 20,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	}
+});
+//--------------------Wow-init---------------------------------
+new WOW().init();
+//--------------------------------------------------------------
+//
+//---------------------------preventDefault-img-------------------
+let imgLink = document.querySelectorAll('img');
+for (i = 1; i < imgLink.length; i++) {
+	imgLink[i].oncontextmenu = (function (e) {
+		e.preventDefault();
+
+	})
+};
 
 const animItems = document.querySelectorAll('.anim-items');
 
@@ -105,3 +150,31 @@ function ibg(){
    }
    }
    ibg();
+(function () {
+	let click = document.getElementById('menu-active');
+	let btnBurger = document.querySelector('.toggle-menu');
+	let menuBurg = document.querySelector('.menu__body');
+	let linksContact = document.querySelectorAll('.content-icon');
+	let linksPage = document.querySelectorAll('.list__items, .content-icon');
+
+	click.addEventListener('click', function (event) {
+		event.preventDefault();
+		var menu = document.getElementById('menu__body');
+		menu.classList.toggle('active');
+		document.body.classList.toggle('_lock');
+
+		window.addEventListener('click', function (e) {
+			const target = e.target;
+			if (!target.closest('.menu__body') && !target.closest('.toggle-menu')) {
+				menuBurg.classList.remove('active')
+				document.body.classList.remove('_lock');
+			}
+		});
+		for (i = 0; i < linksPage.length; i++) {
+			linksPage[i].addEventListener('click', function () {
+				menuBurg.classList.remove('active')
+				document.body.classList.remove('_lock');
+			})
+		}
+	});
+})();
