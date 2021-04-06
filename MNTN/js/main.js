@@ -70,3 +70,13 @@ window.addEventListener('scroll', () => {
 		links[3].classList.add('active');
 	}
 })
+
+window.onload = function () {
+	window.setTimeout(function () {
+		document.body.classList.add('loaded_hiding');
+		window.setTimeout(function () {
+			document.body.classList.add('loaded');
+			document.body.classList.remove('loaded_hiding');
+		}, 500);
+	}, 1600);
+};
