@@ -544,7 +544,7 @@ main {
   padding: 0 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(600px, 100vh));
+  grid-template-rows: repeat(3, minmax(700px, 100vh));
   gap: 50px 70px;
   align-items: center;
 }
