@@ -552,7 +552,7 @@ main {
 	padding: 0 60px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(3, minmax(700px, 100vh));
+	grid-template-rows: repeat(3, minmax(700px, 80vh));
 	gap: 50px 70px;
 	align-items: center;
 }
@@ -903,7 +903,7 @@ footer {
 
 @media (min-width: 1920px) {
 	.main__content {
-		grid-template-rows: repeat(3, 80vh);
+		grid-template-rows: repeat(3, 100vh);
 		margin: 0 auto;
 	}
 
