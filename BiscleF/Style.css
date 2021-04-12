@@ -157,17 +157,23 @@ main {
 /*---------------------------------Header----------------------------*/
 header {
 	width: 100%;
-	max-height: 80px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 65px;
+	height: 80px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	transition: 0.5s ease-out;
 	transition-property: background-color, color;
 	z-index: 10;
+}
+.header__conteiner {
+	max-width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 60px;
+	overflow: hidden;
+	position: relative;
 }
 .lock-padding {
 	overflow: hidden;
@@ -182,12 +188,13 @@ header.sticky {
 header.sticky ul li a,
 header.sticky .header__logo a {
 	color: #fff;
+	transition: 0.5s ease;
 }
 .header__nav {
 	font-family: Biryani;
 	font-size: 20px;
 	line-height: 0.9;
-	position: relative;
+	/* position: relative; */
 }
 .header__ul {
 	position: relative;
@@ -203,7 +210,7 @@ header.sticky .header__logo a {
 	color: rgba(0, 0, 0, 0.9);
 	display: inline-block;
 	line-height: 2;
-	transition: 0.6s;
+	transition: 0.5s ease;
 }
 .header__ul li {
 	position: relative;
@@ -231,20 +238,18 @@ header.sticky .header__logo a {
 }
 @media only screen and (max-width: 1024px) {
 	header {
-		padding: 10px 50px;
 		max-height: 70px;
 	}
-	header.sticky {
+	.header__conteiner {
 		padding: 10px 50px;
+	}
+	header.sticky {
 		max-height: 70px;
 	}
 }
 @media only screen and (max-width: 766px) {
-	header {
-		padding: 10px 0;
-	}
-	header.sticky {
-		padding: 10px 0;
+	.header__conteiner {
+		padding: 10px 40px;
 	}
 	header.sticky ul li a {
 		color: rgb(0, 0, 0);
@@ -263,10 +268,7 @@ header.sticky .header__logo a {
 	.header__ul li a {
 		min-width: 100%;
 	}
-	.header__ul li a:hover {
-		color: #a3f52f;
-		transition: color 0.2ms linear;
-	}
+
 	.header__ul li:after {
 		opacity: 0;
 		border: none;
@@ -275,84 +277,94 @@ header.sticky .header__logo a {
 	.header__ul li:hover:after {
 		opacity: 0;
 	}
-	.header__logo {
-		margin-left: 30px;
-	}
+
 	.header__logo a {
 		font-size: calc(50px + (20 + 20 * 0.7) * ((100vw - 320px) / 1440));
 	}
 }
 @media only screen and (max-width: 425px) {
-	.header {
-		padding: 10px 0;
-	}
-	.header.sticky {
-		padding: 10px 0;
+	.header__conteiner {
+		padding: 0 30px;
 	}
 }
 /* ------------------------Burger ---------------------------------*/
 .header__nav-burg {
 	display: none;
-	position: absolute;
-	top: -30px;
-	right: 0;
-	border: 0;
-	background-color: transparent;
-	font-size: 3.5rem;
-	height: 1em;
-	width: 1em;
-	line-height: 0.4;
-	text-indent: 5em;
-	white-space: nowrap;
-	overflow: hidden;
 }
 .sticky .header__nav-burg {
 	color: #fff;
 }
-.header__nav-burg::after {
-	display: block;
-	text-indent: 0;
-	content: "\2261";
-}
-.header__nav.is-open .header__nav-burg::after {
-	text-indent: 0;
-	content: "\00d7";
-}
+
 @media only screen and (max-width: 766px) {
 	.header__dropdown {
-		opacity: 0;
 		overflow: hidden;
 		position: fixed;
-		top: -100%;
-		right: 0;
+		top: 70px;
+		right: -100%;
 		width: 100%;
 		height: 100%;
 		background-color: white;
 		text-align: center;
-		transition: all 0.5s ease;
-		z-index: -10;
+		transition: right 0.5s ease;
 	}
 	.header__nav-burg {
-		right: 0;
 		display: block;
-		margin-right: 27px;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
 	}
-	.header__nav.is-open .header__dropdown {
-		opacity: 1;
-		position: fixed;
-		top: 69px;
-		right: 0;
+	.header__nav-burg::before,
+	.header__nav-burg::after,
+	.header__nav-burg span {
+		position: absolute;
+		height: 10%;
 		width: 100%;
-		height: 100%;
-		background-color: white;
-		text-align: center;
-		/*z-index: -1;*/
-		transition: all 0.5s ease;
+		background-color: #000;
+		transition: all 0.3s ease;
 	}
-	.header__ul > li {
-		margin: 0;
+	.header__nav-burg::before,
+	.header__nav-burg::after {
+		content: "";
+	}
+	.header__nav-burg::before {
+		top: 0;
+	}
+	.header__nav-burg::after {
+		bottom: 0;
+	}
+	.header__nav-burg span {
+		top: 50%;
+		transform: translate(0, -50%) scale(1);
+	}
+	.sticky .header__nav-burg::before,
+	.sticky .header__nav-burg::after,
+	.sticky .header__nav-burg span {
+		background-color: #fff;
 	}
 }
+.header__nav.is-open .header__dropdown {
+	right: 0;
+	transition: right 0.5s ease;
+}
+.header__nav.is-open .header__ul > li {
+	margin: 0;
+}
+.header__nav.is-open .header__nav-burg span {
+	transform: translate(0, -50%) scale(0);
+	transition: all 0.5s ease;
+}
+.header__nav.is-open .header__nav-burg::after {
+	top: 50%;
+	transform: rotate(45deg) translate(0px, -50%);
+	transition: all 0.5s ease;
+}
+.header__nav.is-open .header__nav-burg::before {
+	top: 50%;
+	transform: rotate(-45deg) translate(0px, -50%);
+	transition: all 0.5s ease;
+}
+
 @media only screen and (max-width: 425px) {
 	.header__nav.is-open .header__dropdown {
 		top: 70px;
@@ -417,7 +429,6 @@ header.sticky .header__logo a {
 @media only screen and (max-width: 766px) {
 	.first__r-screen {
 		padding: 0 3.125em;
-		/* max-width: 100%; */
 	}
 	.first__l-screen {
 		grid-area: 1 / 1 / 2 / 1;
@@ -573,8 +584,6 @@ header.sticky .header__logo a {
 	text-align: center;
 	background-color: yellow;
 	padding-top: 5.5px;
-	/*padding: 5px 4px 4px 4px;*/
-	/*margin-top: 8px;*/
 }
 @media only screen and (max-width: 1210px) {
 	.second__l-screen {
@@ -638,20 +647,6 @@ header.sticky .header__logo a {
 		padding: 20px 40px 0;
 		text-align: center;
 	}
-	/* .second__r-screen {
-		margin-bottom: 75px;
-	}
-	.option-3.active {
-		left: 50%;
-		top: 100%;
-	}
-	.option-2.active {
-		top: 90%;
-	}
-	.option-1.active {
-		left: 50%;
-		top: 80%;
-	} */
 	.second__r-screen {
 		margin: 0;
 	}
@@ -707,40 +702,6 @@ header.sticky .header__logo a {
 	.second__l-screen p:last-child {
 		display: none;
 	}
-	/* .second__r-screen {
-		margin: 0;
-	}
-	.option-1,
-	.option-2,
-	.option-3 {
-		position: relative;
-		display: block;
-		margin: 10px 0;
-		opacity: 1;
-	}
-	.second__r-screen a::before {
-		content: "";
-		top: 50%;
-		left: 50%;
-		width: 6px;
-		height: 6px;
-		transform: translate(-50%, -50%);
-		animation: none;
-		cursor: none;
-		pointer-events: none;
-	}
-	.second__r-screen .span-clicker1,
-	.second__r-screen .span-clicker2,
-	.second__r-screen .span-clicker3 {
-		position: absolute;
-		width: 14px;
-		height: 14px;
-		text-indent: 10em;
-		overflow: hidden;
-		text-decoration: none;
-		background-color: rgba(233, 227, 227, 0.47);
-		border-radius: 50%;
-	} */
 }
 /*-----------------------THird-screen ------------------------*/
 .third__screen {
@@ -764,6 +725,7 @@ header.sticky .header__logo a {
 	.third__screen {
 		grid-area: 5 / 1 / 6 / 1;
 		font-size: 0;
+		padding-top: 69px;
 	}
 	.third__screen iframe {
 		min-height: 450px;
