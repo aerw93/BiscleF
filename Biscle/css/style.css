@@ -1449,6 +1449,9 @@ iframe {
   display: block;
   position: absolute;
   top: 55%;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .follow a:active {
@@ -1469,7 +1472,10 @@ iframe {
 }
 
 .follow a:hover {
-  top: calc(50% - 2px);
+  top: calc(50% - 1px);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .follow a:active {
