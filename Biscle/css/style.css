@@ -17,6 +17,62 @@
   visibility: hidden;
 }
 
+@font-face {
+  font-family: "Biryani";
+  font-display: swap;
+  src: url("../fonts/Biryani-Bold.woff") format("woff"), url("../fonts/Biryani-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Biryani";
+  font-display: swap;
+  src: url("../fonts/Biryani-Regular.woff") format("woff"), url("../fonts/Biryani-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kameron";
+  font-display: swap;
+  src: url("../fonts/Kameron-Bold.woff") format("woff"), url("../fonts/Kameron-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-display: swap;
+  src: url("../fonts/Kanit-ExtraBold.woff") format("woff"), url("../fonts/Kanit-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-display: swap;
+  src: url("../fonts/Kanit-Medium.woff") format("woff"), url("../fonts/Kanit-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kanit";
+  font-display: swap;
+  src: url("../fonts/Kanit-SemiBold.woff") format("woff"), url("../fonts/Kanit-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
 /*-----------------------------Обнуление --------------------------*/
 
 * {
@@ -162,6 +218,7 @@ main {
           align-items: center;
   row-gap: 50px;
   margin-top: 80px;
+  background-color: white;
 }
 
 /*---------------------------------Header----------------------------*/
@@ -408,14 +465,6 @@ header.sticky .header__logo a {
   padding-top: 25px;
 }
 
-.second__l-title h2::before {
-  content: "";
-  display: block;
-  visibility: hidden;
-  height: 100px;
-  margin-top: -100px;
-}
-
 .second__l-screen {
   grid-area: 2 / 1 / 3 / 2;
   padding-left: 90px;
@@ -580,6 +629,15 @@ header.sticky .header__logo a {
   overflow: hidden;
 }
 
+.third__screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  margin-top: -100px;
+}
+
 .third__screen img {
   width: 100%;
   height: 100%;
@@ -627,8 +685,6 @@ iframe {
 
 .fourth__screen {
   grid-area: 4 / 1 / 5 / 3;
-  padding-top: 80px;
-  margin-top: -80px;
 }
 
 .body-cards {
@@ -785,16 +841,6 @@ iframe {
   padding-left: 8.75rem;
 }
 
-.r-screen__title h2::before {
-  content: "";
-  display: block;
-  height: 100px;
-  margin-top: -100px;
-  visibility: hidden;
-  -ms-touch-action: none;
-      touch-action: none;
-}
-
 .r-screen__prise {
   padding: 25px 0;
 }
@@ -837,7 +883,7 @@ iframe {
 }
 
 .radio-title a {
-  color: #0075ff;
+  color: #040786;
 }
 
 .order {
@@ -1111,15 +1157,6 @@ iframe {
   font-family: Kanit;
   font-size: 22px;
   text-transform: uppercase;
-}
-
-.eight__title h2::before {
-  content: "";
-  display: block;
-  visibility: hidden;
-  pointer-events: none;
-  height: 100px;
-  margin-top: -100px;
 }
 
 .input__body {

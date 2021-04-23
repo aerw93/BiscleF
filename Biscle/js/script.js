@@ -686,6 +686,7 @@ function createIframe(id) {
 
 	iframe.setAttribute('allowfullscreen', '');
 	iframe.setAttribute('allow', 'autoplay');
+	iframe.setAttribute('title', 'my Fend');
 	iframe.setAttribute('src', generateURL(id));
 	iframe.classList.add('video__media');
 
@@ -694,6 +695,7 @@ function createIframe(id) {
 
 function generateURL(id) {
 	let query = '?rel=0&showinfo=0&autoplay=1';
+
 
 	return 'https://www.youtube.com/embed/' + id + query;
 }
@@ -793,4 +795,26 @@ for (let index = 0; index < color.length; index++) {
 window.addEventListener('scroll', function () {
 	let header = document.querySelector('header');
 	header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+// smooth-scroll	
+document.querySelectorAll('.scroll-to').forEach(link => {
+
+	link.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		let href = this.getAttribute('href').substring(1);
+
+		const scrollTarget = document.getElementById(href);
+
+		const topOffset = document.querySelector('.header').offsetHeight;
+		// const topOffset = 0; // если не нужен отступ сверху 
+		const elementPosition = scrollTarget.getBoundingClientRect().top;
+		const offsetPosition = elementPosition - topOffset;
+		console.log(elementPosition)
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: 'smooth'
+		});
+	});
 });
