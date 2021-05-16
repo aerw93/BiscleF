@@ -26,7 +26,19 @@ function ibg() {
 }
 ibg();;
 window.onload = function () {
-	document.querySelector('.tabs__block').style.display = "flex";
+	let tabItems = document.querySelectorAll('.tabs__item')
+	let tabBlocks = document.querySelectorAll('.tabs__block')
+
+	for (let i = 0; i < tabItems.length; i++) {
+		tabItems[i].addEventListener('click', function (e) {
+			e.preventDefault();
+			tabBlocks.forEach(element => {
+				element.classList.remove('open')
+			});
+			tabBlocks[i].classList.add('open')
+
+		})
+	}
 }
 //Menu_burger
 let btn = document.querySelector('.svg-Vector-dims');
