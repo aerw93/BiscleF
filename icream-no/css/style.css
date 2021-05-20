@@ -447,7 +447,8 @@ main {
 .concept__title {
   padding: 20px 0;
   width: 50%;
-  margin-left: 110px;
+  margin-left: 70px;
+  position: relative;
 }
 
 .concept__title h2 {
@@ -480,7 +481,8 @@ main {
 
 .concept__contacts {
   padding-bottom: 100px;
-  margin-left: 110px;
+  margin-left: 70px;
+  margin-bottom: 100px;
   height: 40%;
 }
 
@@ -510,7 +512,7 @@ main {
 .concept__contacts .contacts__body p::after {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: -10px;
   left: 0;
   width: 70px;
   height: 2px;
@@ -521,10 +523,12 @@ main {
   width: 100%;
   height: 100%;
   padding-left: 50px;
+  position: relative;
+  top: 10px;
 }
 
 .contac-items li:nth-of-type(2) {
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .contac-items a {
@@ -583,7 +587,7 @@ main {
 }
 
 .contacts__footer {
-  width: 78%;
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -593,6 +597,8 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  top: 70px;
 }
 
 .contacts__footer a {
@@ -818,12 +824,12 @@ main {
     margin-left: 50px;
   }
 
-  .concept__contacts {
+  .concept__title {
     margin-left: 50px;
   }
 
   .concept__contacts {
-    margin-left: 20px;
+    margin-left: 50px;
   }
 
   .bg-fridge {
@@ -832,6 +838,10 @@ main {
 
   .bg-choclate {
     bottom: 20px;
+  }
+
+  .contacts__footer {
+    width: 90%;
   }
 
   .footer__location {
@@ -909,6 +919,10 @@ main {
     bottom: 50px;
   }
 
+  .contacts__footer {
+    width: 100%;
+  }
+
   .footer__location {
     padding: 0 50px;
   }
@@ -980,6 +994,14 @@ main {
     width: 50%;
     padding: 0;
     margin-left: 45px;
+  }
+
+  .concept__title {
+    margin-left: 20px;
+  }
+
+  .concept__contacts {
+    margin-left: 20px;
   }
 
   .bg-fridge {
@@ -1112,6 +1134,10 @@ main {
     margin-left: 25px;
     position: relative;
     top: -70px;
+  }
+
+  .concept__contacts {
+    margin-bottom: 50px;
   }
 
   .bg-fridge {
@@ -1254,8 +1280,21 @@ main {
     margin-left: 15px;
   }
 
+  .concept__title {
+    margin-left: 10px;
+  }
+
   .concept__contacts {
     margin-left: 10px;
+  }
+
+  .concept__contacts .contacts__body p {
+    top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .contac-items {
+    top: 80px;
   }
 
   .bg-choclate {
