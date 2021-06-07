@@ -236,7 +236,7 @@ h6 {
   width: 50px;
   height: 50px;
   fill: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   margin-right: 5px;
 }
 
@@ -400,7 +400,6 @@ h6 {
   min-width: 190px;
   width: 270px;
   border-radius: 59px;
-  border-top-left-radius: 25px;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -845,6 +844,7 @@ h6 {
 
   .hero__header h1 {
     font-size: 31px;
+    margin-top: 10px;
   }
 
   .hero__card {
@@ -900,7 +900,7 @@ h6 {
     width: 60px;
     height: 60px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .main__container {
@@ -997,7 +997,11 @@ h6 {
     height: 29px;
     padding-left: 0;
     margin-right: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+  }
+
+  .hero__header h1 {
+    margin-top: 5px;
   }
 
   .hero__card {
