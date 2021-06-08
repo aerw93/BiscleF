@@ -336,11 +336,14 @@ h6 {
 
 .card__form form label {
   position: relative;
+  background: transparent;
+  outline-color: transparent;
 }
 
 .card__form form input {
   width: 100%;
-  background-color: transparent;
+  outline-color: transparent;
+  background: transparent;
   border-bottom: 2px solid #fff;
   padding: 10px 0 10px 45px;
   margin: 15px 0;
