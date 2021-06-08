@@ -25,37 +25,15 @@ function ibg() {
 	}
 }
 ibg();;
-document.addEventListener("mousemove", parallax);
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
-function parallax(e) {
-
-	this.querySelectorAll('.layer').forEach(layer => {
-		var speed = layer.getAttribute('data-speed')
-
-
-
-		var x = (window.innerWidth - e.pageX * speed) / 100;
-		var y = (window.innerHeight - e.pageY * speed) / 100;
-		// console.log(y);
-		layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-	});
-}
-
-
-
-let listItems = document.querySelectorAll('.itemlist')
-let listBlocks = document.querySelectorAll('.li-block')
-
-for (let i = 0; i < listItems.length; i++) {
-	listItems[i].addEventListener('click', function (e) {
-		e.preventDefault();
-		listBlocks.forEach(element => {
-			element.classList.remove('open')
-		});
-		listBlocks[i].classList.add('open')
-
-	})
-}
-;
+// We listen to the resize event
+window.addEventListener('resize', () => {
+	// We execute the same script as before
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});;
 
