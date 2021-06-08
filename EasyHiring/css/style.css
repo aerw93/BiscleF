@@ -264,6 +264,18 @@ h6 {
 .card__body {
   font-family: "sf-ui";
   width: 80%;
+  min-height: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: #fff;
 }
 
@@ -274,7 +286,6 @@ h6 {
   letter-spacing: normal;
   line-height: normal;
   text-align: left;
-  padding-top: 10px;
 }
 
 .question {
@@ -307,18 +318,6 @@ h6 {
   padding: 10px 0;
 }
 
-.interview__row:first-child {
-  padding: 0 0 10px 0;
-}
-
-.interview__row:last-of-type {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10px 0 0 0;
-}
-
 .card__form {
   max-width: 80%;
 }
@@ -332,7 +331,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .card__form form label {
@@ -362,6 +361,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 30px;
+  margin-top: 10px;
 }
 
 .card__form .form__submit button {
@@ -495,6 +495,17 @@ h6 {
 
 .svg-mob-logo-dims {
   display: none;
+}
+
+.card__interview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
 
 .main {
@@ -681,6 +692,34 @@ h6 {
   margin-top: -10px;
 }
 
+@media only screen and (min-width: 768px) and (min-height: 1150px) {
+  .card__body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 35px;
+  }
+
+  .card__body .card__interview {
+    gap: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .card__body .card__form {
+    margin: 15px 0;
+  }
+
+  .card__body .form__submit {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 1920px) {
   .hero__body {
     padding-left: calc(30px + (140 - 30) * ((100vw - 1024px) / (1920 - 1024)));
@@ -720,10 +759,6 @@ h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-
-  .card__body h2 {
-    padding-top: 0;
   }
 
   .card__form .form__submit {
@@ -1056,13 +1091,22 @@ h6 {
   }
 }
 
-@media only screen and (max-width: 500px) and (min-height: 805px) and (max-height: 950px) {
+@media only screen and (max-width: 500px) and (min-height: 720px) and (max-height: 950px) {
   .hero__body {
     height: 100vh;
   }
 }
 
 @media only screen and (max-width: 425px) {
+  .card__form {
+    margin: 0 0 15px 0;
+  }
+
+  .card__interview {
+    gap: 0;
+    margin: 5px 0;
+  }
+
   .main__container {
     padding: 0 25px;
   }
