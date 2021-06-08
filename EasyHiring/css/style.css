@@ -239,13 +239,12 @@ input:-webkit-autofill:focus input:-webkit-autofill {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 140px;
 }
 
 .hero__header .svg-logo-dims {
@@ -465,6 +464,7 @@ input:-webkit-autofill:focus input:-webkit-autofill {
 
 .decriptio-block {
   width: 36%;
+  margin-bottom: 10px;
 }
 
 .card__pic {
@@ -757,10 +757,6 @@ input:-webkit-autofill:focus input:-webkit-autofill {
     padding-bottom: calc(20px + (50 - 20) * ((100vw - 1024px) / (1920 - 1024)));
   }
 
-  .hero__header {
-    padding-left: calc(40px + (140 - 40) * ((100vw - 768px) / (1920 - 768)));
-  }
-
   .hero__card {
     padding-left: calc(40px + (140 - 40) * ((100vw - 768px) / (1920 - 768)));
   }
@@ -810,7 +806,7 @@ input:-webkit-autofill:focus input:-webkit-autofill {
 
 @media only screen and (max-width: 1440px) {
   .hero__body {
-    min-height: 900px;
+    min-height: 800px;
   }
 
   .form__subtitle {
@@ -836,7 +832,7 @@ input:-webkit-autofill:focus input:-webkit-autofill {
 @media only screen and (max-width: 1210px) {
   .hero__body {
     padding: 0;
-    min-height: 800px;
+    min-height: 750px;
   }
 
   .hero__container {
@@ -892,9 +888,7 @@ input:-webkit-autofill:focus input:-webkit-autofill {
   }
 
   .hero__header {
-    padding-left: 30px;
     height: 10%;
-    padding-top: 15px;
   }
 
   .hero__header .svg-logo-dims {
@@ -1055,14 +1049,10 @@ input:-webkit-autofill:focus input:-webkit-autofill {
   }
 
   .hero__header {
-    padding-left: 20px;
-    padding-top: 5px;
     height: 70px;
   }
 
   .hero__header {
-    padding-left: 20px;
-    padding-top: 5px;
     height: 60px;
   }
 
