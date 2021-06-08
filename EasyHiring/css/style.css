@@ -1169,6 +1169,10 @@ input::-webkit-input-placeholder {
     margin: 20px 0;
   }
 
+  .card__form .form__submit {
+    margin-top: 50px;
+  }
+
   .card__interview {
     gap: 10px;
   }
