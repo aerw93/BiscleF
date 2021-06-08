@@ -947,6 +947,10 @@ input::-webkit-input-placeholder {
   }
 
   .card__interview {
+    gap: 10px;
+  }
+
+  .card__interview {
     margin: 10px 0;
   }
 
@@ -1047,6 +1051,12 @@ input::-webkit-input-placeholder {
     height: 70px;
   }
 
+  .hero__header {
+    padding-left: 20px;
+    padding-top: 5px;
+    height: 60px;
+  }
+
   .hero__header .svg-logo-dims {
     width: 29px;
     height: 29px;
@@ -1078,7 +1088,7 @@ input::-webkit-input-placeholder {
 
   .card__form .form__submit button {
     min-width: 100%;
-    margin: 15px 0;
+    margin: 5px 0;
   }
 
   .form__subtitle {
@@ -1126,13 +1136,21 @@ input::-webkit-input-placeholder {
     height: 100%;
   }
 
+  .interview__row {
+    padding: 5px 0;
+  }
+
   .card__form {
-    margin: 0 0 15px 0;
+    margin: 0 0 5px 0;
+  }
+
+  .btn {
+    height: 60px;
   }
 
   .card__interview {
     gap: 0;
-    margin: 5px 0;
+    margin: 0;
   }
 
   .main__container {
@@ -1140,9 +1158,25 @@ input::-webkit-input-placeholder {
   }
 }
 
-@media only screen and (max-width: 425px) and (min-height: 660px) and (max-height: 950px) {
+@media only screen and (max-width: 425px) and (min-height: 550px) and (max-height: 950px) {
   .hero__body {
     height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 425px) and (min-height: 650px) {
+  .card__form form {
+    margin: 20px 0;
+  }
+
+  .card__interview {
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 425px) and (min-height: 740px) {
+  .card__form .form__submit {
+    gap: 15px;
   }
 }
 
