@@ -196,8 +196,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus input:-webkit-autofill {
   -webkit-text-fill-color: inherit !important;
   -webkit-box-shadow: 0 0 0px 1000px #ffffff00 inset;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
+  -webkit-transition: background-color 9999s ease-in-out 0s;
+  transition: background-color 9999s ease-in-out 0s;
   border-bottom: 2px solid #fff;
 }
 
@@ -292,10 +292,12 @@ input:-webkit-autofill:focus input:-webkit-autofill {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  word-break: break-all;
   color: #fff;
 }
 
 .card__body h2 {
+  max-width: 70%;
   font-size: 50px;
   font-weight: 800;
   font-style: normal;
@@ -512,10 +514,6 @@ input:-webkit-autofill:focus input:-webkit-autofill {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.svg-mob-logo-dims {
-  display: none;
 }
 
 .card__interview {
@@ -915,6 +913,10 @@ input:-webkit-autofill:focus input:-webkit-autofill {
     width: 100%;
   }
 
+  .card__body h2 {
+    max-width: 100%;
+  }
+
   .answer-inline {
     overflow-wrap: anywhere;
   }
@@ -955,14 +957,6 @@ input:-webkit-autofill:focus input:-webkit-autofill {
 
   .card__interview {
     margin: 10px 0;
-  }
-
-  .svg-mob-logo-dims {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-    margin-bottom: 10px;
   }
 
   .main__container {
@@ -1012,14 +1006,6 @@ input:-webkit-autofill:focus input:-webkit-autofill {
 
   .decript__submit button {
     margin: 0 30px;
-  }
-}
-
-@media only screen and (max-width: 768px) and (max-width: 500px) {
-  .svg-mob-logo-dims {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 5px;
   }
 }
 
