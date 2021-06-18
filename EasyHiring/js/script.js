@@ -11,10 +11,13 @@ testWebP(function (support) {
 
 	if (support == true) {
 		document.querySelector('body').classList.add('webp');
+		ibgWebp();
 	} else {
 		document.querySelector('body').classList.add('no-webp');
+		ibg();
 	}
-});;
+});
+
 function ibg() {
 
 	let ibg = document.querySelectorAll(".ibg");
@@ -24,7 +27,41 @@ function ibg() {
 		}
 	}
 }
-ibg();;
+function ibgWebp() {
+
+	let ibg = document.querySelectorAll(".ibg");
+	for (var i = 0; i < ibg.length; i++) {
+		if (ibg[i].querySelector('img')) {
+
+			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector("img").getAttribute('src').replace("png",
+				"webp") + ')';
+		}
+		let formatF = function () {
+			let format = [jpeg, jpg, png]
+			ibg[i].querySelector("img").getAttribute('src')
+		}
+	}
+
+}
+let link = "img/mobile-man.png";
+let test = "webp"
+let newLink = link.replace("png", "webp");
+
+
+
+console.log(newLink);;
+function ibg() {
+
+	let ibg = document.querySelectorAll(".ibg");
+	for (var i = 0; i < ibg.length; i++) {
+		if (ibg[i].querySelector('img')) {
+			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+		}
+	}
+}
+
+
+;
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -36,4 +73,3 @@ window.addEventListener('resize', () => {
 	let vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
 });;
-
