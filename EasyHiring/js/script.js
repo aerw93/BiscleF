@@ -36,10 +36,10 @@ function ibgWebp() {
 			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector("img").getAttribute('src').replace("png",
 				"webp") + ')';
 		}
-		let formatF = function () {
-			let format = [jpeg, jpg, png]
-			ibg[i].querySelector("img").getAttribute('src')
-		}
+		// let formatF = function () {
+		// 	let format = [jpeg, jpg, png]
+		// 	ibg[i].querySelector("img").getAttribute('src')
+		// }
 	}
 
 }
@@ -49,7 +49,7 @@ let newLink = link.replace("png", "webp");
 
 
 
-console.log(newLink);;
+// console.log(newLink);;
 function ibg() {
 
 	let ibg = document.querySelectorAll(".ibg");
