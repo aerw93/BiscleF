@@ -1709,7 +1709,7 @@ iframe {
 
 .popup__text-buy {
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 82.05128%;
   height: 0;
 }
 
@@ -1717,7 +1717,7 @@ iframe {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 600px;
+  max-height: 500px;
 }
 
 .go-back,
