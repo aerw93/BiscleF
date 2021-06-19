@@ -624,23 +624,14 @@ header.sticky .header__logo a {
 .third__screen {
   grid-area: 3 / 1 / 4 / 3;
   height: 100%;
-  width: 100%;
+  min-width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.third__screen::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100px;
-  margin-top: -100px;
-}
-
 .third__screen img {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  height: auto;
 }
 
 .video__button {
@@ -2181,6 +2172,11 @@ iframe {
     text-decoration: none;
     background-color: rgba(233, 227, 227, 0.47);
     border-radius: 50%;
+  }
+
+  .third__screen img {
+    min-width: 100%;
+    height: 100%;
   }
 
   .sixth__l-screen {
