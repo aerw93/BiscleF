@@ -172,7 +172,7 @@ body.lock {
 h1,
 h2 {
   font-family: Kanit, sans-serif;
-  font-size: calc(25px + 25 * (100vw / 1440));
+  font-size: calc(25px + 20 * (100vw / 1440));
   font-weight: 800;
   letter-spacing: 0.05em;
   color: rgba(0, 0, 0, 0.9);
@@ -1121,7 +1121,8 @@ iframe {
           align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 10px 0 40px;
+  padding: 35px 10px 0 40px;
+  min-height: 435px;
 }
 
 .eight__container {
@@ -1133,6 +1134,7 @@ iframe {
   border: 1px solid #dfdfdf;
   max-width: 100%;
   height: 100%;
+  min-height: 400px;
 }
 
 .eight__r-screen {
@@ -1770,6 +1772,23 @@ iframe {
   opacity: 1;
 }
 
+.iframe-wrapper {
+  width: 100%;
+  height: 0;
+  min-height: 400px;
+  padding-bottom: 89.55224%;
+  position: relative;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+}
+
+.map-adress {
+  margin-top: 10px;
+  display: block;
+}
+
 @media only screen and (min-width: 1440px) {
   header {
     width: 1440px;
@@ -1835,6 +1854,10 @@ iframe {
 
   .seventh__r-screen {
     margin-bottom: 0;
+  }
+
+  .eight__l-screen {
+    padding: 10px 20px 0 20px;
   }
 
   .text-area {
@@ -2298,6 +2321,14 @@ iframe {
     text-align: center;
   }
 
+  .eight__l-screen {
+    min-height: unset;
+  }
+
+  .eight__container iframe {
+    min-height: unset;
+  }
+
   .eight__container address {
     padding-top: 5px;
   }
@@ -2310,7 +2341,7 @@ iframe {
   .eight__r-screen {
     grid-area: 14 / 1 / 15 / 2;
     padding: 0 30px;
-    margin-top: 50px;
+    margin-top: 0;
   }
 
   .eight__container {
@@ -2368,6 +2399,10 @@ iframe {
 
   .popup__content-buy {
     max-width: 90%;
+  }
+
+  .iframe-wrapper {
+    min-height: unset;
   }
 }
 
@@ -2547,7 +2582,7 @@ iframe {
   }
 
   .eight__r-screen {
-    margin-top: 80px;
+    margin-top: 0;
   }
 
   .eight__l-screen {
