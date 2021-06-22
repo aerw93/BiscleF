@@ -11,20 +11,27 @@ testWebP(function (support) {
 
 	if (support == true) {
 		document.querySelector('body').classList.add('webp');
+		let ibg = document.querySelectorAll(".ibg");
+		for (var i = 0; i < ibg.length; i++) {
+			if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src').endsWith("png")) {
+
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector("img").getAttribute('src').replace("png",
+					"webp") + ')';
+			} else {
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector("img").getAttribute('src').replace("jpg",
+					"webp") + ')';
+			}
+		}
 	} else {
 		document.querySelector('body').classList.add('no-webp');
-	}
-});;
-function ibg() {
-
-	let ibg = document.querySelectorAll(".ibg");
-	for (var i = 0; i < ibg.length; i++) {
-		if (ibg[i].querySelector('img')) {
-			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+		let ibg = document.querySelectorAll(".ibg");
+		for (var i = 0; i < ibg.length; i++) {
+			if (ibg[i].querySelector('img')) {
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+			}
 		}
 	}
-}
-ibg();;
+});;
 window.onload = function () {
 	let tabItems = document.querySelectorAll('.tabs__item')
 	let tabBlocks = document.querySelectorAll('.tabs__block')
@@ -68,10 +75,10 @@ const swiper = new Swiper('.swiper-container', {
 	loop: true,
 	speed: 1200,
 	spaceBetween: 10,
-	autoplay: {
-		delay: 4000,
-		disableOnInteraction: false,
-	},
+	// autoplay: {
+	// 	delay: 4000,
+	// 	disableOnInteraction: false,
+	// },
 
 	// If we need pagination
 	pagination: {
@@ -142,5 +149,19 @@ let select = function () {
 	}
 
 };
-select();;
+select();
+
+//100vh(mobile)
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+window.addEventListener('resize', () => {
+	// We execute the same script as before
+	let vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+;
 
