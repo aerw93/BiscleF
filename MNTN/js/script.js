@@ -11,20 +11,28 @@ testWebP(function (support) {
 
 	if (support == true) {
 		document.querySelector('body').classList.add('webp');
+		let ibg = document.querySelectorAll(".ibg");
+		for (var i = 0; i < ibg.length; i++) {
+			if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src').endsWith("png")) {
+
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector("img").getAttribute('src').replace("png",
+					"webp") + ')';
+			} else {
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector("img").getAttribute('src').replace("jpg",
+					"webp") + ')';
+			}
+		}
 	} else {
 		document.querySelector('body').classList.add('no-webp');
-	}
-});;
-function ibg() {
-
-	let ibg = document.querySelectorAll(".ibg");
-	for (var i = 0; i < ibg.length; i++) {
-		if (ibg[i].querySelector('img')) {
-			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+		let ibg = document.querySelectorAll(".ibg");
+		for (var i = 0; i < ibg.length; i++) {
+			if (ibg[i].querySelector('img')) {
+				ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+			}
 		}
 	}
-}
-ibg();
+});;
+
 
 //Parallax
 let parSky = document.querySelector('.sky__back');
